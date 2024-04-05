@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="MIMOUN GADGETS SERVICES LTD LTD - Your go-to for exceptional gadget services.">
+    <title>MIMOUN GADGETS SERVICES LTD LTD</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <style>
+        body {
+            font-family: "Oswald", sans-serif;
+            background-color: #FEFDED;
+            /* Page background color */
+            color: #240A34;
+            /* Default text color */
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #240A34;
+            /* Main headers color */
+            margin-bottom: 0px;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: #35374B;
+            /* Smaller headers color */
+            margin-bottom: 2px;
+        }
+
+        h3 {
+            font-size: 2rem;
+            font-weight: 400;
+            color: #35374B;
+            /* Smaller headers color */
+            margin-bottom: 0;
+        }
+
+        h4,
+        p {
+            font-size: 1.2rem;
+            font-weight: 200;
+            color: #6B728E;
+            /* Paragraph text color */
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        input::placeholder {
+            color: #6B728E;
+            /* Placeholder text color */
+            opacity: 1;
+            /* Full opacity */
+        }
+
+        input {
+            border: 2px solid #240A34;
+            /* Input border color */
+            background-color: #FEFDED;
+            /* Input background color */
+            color: #240A34;
+            /* Input text color */
+            padding: 10px;
+            margin-bottom: 10px;
+            /* Space between inputs */
+            width: calc(100% - 22px);
+            /* Full width accounting for padding and border */
+        }
+
+        button {
+            background-color: #240A34;
+            /* Button background color */
+            color: #FEFDED;
+            /* Button text color */
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #35374B;
+            /* Darker shade for hover effect */
+        }
+
+
+        .flex-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .banner-image {
+            width: 100vw;
+            height: 450px;
+            object-fit: cover;
+            margin-bottom: 10px;
+            opacity: 0.7;
+            margin-top: 0;
+        }
+
+        .service-image-container {
+            position: relative;
+            width: 600px;
+            margin-bottom: 20px;
+        }
+
+        .service-image {
+            width: 100%;
+            height: auto;
+        }
+
+        .more-info {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 80px;
+            height: 40px;
+            font-size: 10px;
+            background-color: rgba(255, 255, 255, 0.75);
+            color: #240A34;
+            /* Button text color */
+            padding: 5px;
+            border: none;
+            cursor: pointer;
+            transition: opacity 0.3s ease;
+        }
+
+        .more-info:hover {
+            opacity: 0.9;
+        }
+
+        .alert-box {
+            display: none;
+            position: fixed;
+            right: 10px;
+            bottom: 10px;
+            background-color: white;
+            color: #240A34;
+            /* Alert box text color */
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .logo_head,
+        .logo_body {
+            color: #8d8b8b;
+        }
+
+        .logo_head {
+            margin-top: 10px;
+            margin-bottom: 0;
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .logo_body {
+            margin-top: 0;
+            margin-bottom: 14px;
+            padding-left: 3px;
+            font-size: 14px;
+            font-weight: 400;
+        }
+
+        .welcome_p {
+            color: #a5a5a5;
+            font-weight: 300;
+        }
+
+        .p_footer {
+            font-size: 16px;
+        }
+
+        .container-fluid>ul {
+            display: flex;
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .container-fluid>ul>li>a {
+            text-decoration: none;
+            padding: 10px;
+            color: #858585;
+        }
+
+        .hamburger,
+        .mobile-menu {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+
+            h1 {
+                font-size: 1.7rem;
+                font-weight: 700;
+                color: #240A34;
+                /* Main headers color */
+                margin-bottom: 0px;
+                text-align: center;
+            }
+
+            h2 {
+                font-size: 2rem;
+                font-weight: 600;
+                color: #35374B;
+                /* Smaller headers color */
+                margin-bottom: 2px;
+            }
+
+            h3 {
+                font-size: 1.5rem;
+                font-weight: 400;
+                color: #35374B;
+                /* Smaller headers color */
+                margin-bottom: 0;
+            }
+
+            h4,
+            p {
+                font-size: 1rem;
+                font-weight: 200;
+                color: #6B728E;
+                /* Paragraph text color */
+            }
+
+            .container-fluid>ul {
+                display: none;
+            }
+
+            .service-image-container {
+                width: 100%;
+                max-width: 100vw;
+                margin: 0 auto;
+                box-sizing: border-box;
+            }
+
+            .service-image {
+                max-width: 100%;
+                height: auto;
+            }
+
+            .hamburger {
+                display: block;
+                position: fixed;
+                width: 30px;
+                top: 0;
+                right: 25px;
+                padding: 15px;
+                z-index: 2;
+                background-color: transparent;
+                border: none;
+            }
+
+            .mobile-menu {
+                display: none;
+                position: fixed;
+                top: 20px;
+                right: 15px;
+                background-color: rgba(216, 222, 223, 0.95);
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 20px;
+                box-shadow: 0 2px 5px rgba(255, 255, 255, 0.2);
+                z-index: 1;
+                width: 40%;
+            }
+
+            .mobile-menu a {
+                color: rgb(48, 49, 61);
+                padding: 10px;
+                text-decoration: none;
+                display: block;
+            }
+
+            .logo_head {
+                margin-top: 5px;
+                font-size: 14px;
+                font-weight: 700;
+            }
+
+            .logo_body {
+                margin-top: 0px;
+                margin-bottom: 24px;
+                padding-left: 0px;
+                font-size: 10px;
+                font-weight: 400;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="container-fluid">
+        <strong>
+            <h3 class="logo_head">MIMOUN GADGETS</h3>
+            <h5 class="logo_body">Tech & Innovation</h5>
+        </strong>
+        <ul>
+            <li><a href="#welcome">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+        <a class="hamburger">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list"
+                viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M2.5 12.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z" />
+            </svg>
+        </a>
+        <div class="mobile-menu">
+            <a href="#welcome">Home</a>
+            <a href="#services">Services</a>
+            <a href="#about">About Us</a>
+            <a href="#contact">Contact Us</a>
+        </div>
+    </nav>
+
+    <div class="flex-container">
+        <main class="container">
+            <div class="flex-container">
+                <section id="welcome">
+                    <h1>Welcome to Mimoun Gadgets</h1>
+                    <p class="welcome_p">Your go-to for exceptional gadget services. From circuit board assembly to air
+                        conditioner installation, we're here to serve your technology needs.</p>
+                    <img src="/IMAGES/bannerImage.jpg" alt="Gadget Services Banner" class="banner-image">
+                </section>
+                <section id="services">
+                    <h2>Our Services</h2>
+                    <div class="flex-container">
+                        <div class="service-image-container">
+                            <button class="more-info"
+                                onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });">More
+                                Info</button>
+                            <img src="/IMAGES/image1.jpg" alt="Gadget Repair Services" class="service-image">
+                        </div>
+                        <h3>Networking Solutions Services</h3>
+                        <p>Our expertise in networking solutions ensures that your connectivity needs are not just met
+                            but exceeded. From designing robust network architectures to implementing scalable
+                            solutions, we're committed to optimizing your digital infrastructure for maximum performance
+                            and reliability.</p>
+                        <div class="service-image-container">
+                            <button class="more-info"
+                                onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });">More
+                                Info</button>
+                            <img src="/IMAGES/image2.jpg" alt="DIY Electronics" class="service-image">
+                        </div>
+                        <h3>Chipset Solutions</h3>
+                        <p> Dive into the heart of cutting-edge technology with our advanced chipset solutions.
+                            Engineered for efficiency and performance, our chipsets power the devices and networks of
+                            tomorrow, driving innovation across industries.</p>
+                        <div class="service-image-container">
+                            <button class="more-info"
+                                onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });">More
+                                Info</button>
+                            <img src="/IMAGES/image3.jpg" alt="Networking Solutions" class="service-image">
+                        </div>
+                        <h3>Heavy Data Server Hosting</h3>
+                        <p>Trust your critical data and applications to our secure and reliable server hosting services.
+                            With state-of-the-art facilities and robust infrastructure, we provide a platform for your
+                            digital assets to thrive, offering unparalleled performance, security, and uptime.</p>
+                        <div class="service-image-container">
+                            <button class="more-info"
+                                onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });">More
+                                Info</button>
+                            <img src="/IMAGES/image4.jpg" alt="Air Conditioner Installation" class="service-image">
+                        </div>
+                        <h3>Modems, Routers, and Fiber Optics Installation</h3>
+                        <p>PExperience the pinnacle of connectivity with our range of modems, routers, and fiber optics
+                            installation services. Whether you're upgrading your home network or deploying
+                            enterprise-grade infrastructure, we deliver fast, reliable connectivity solutions tailored
+                            to your specific requirements.</p>
+                    </div>
+                </section>
+                <section id="about">
+                    <h2>About Us</h2>
+                    <p>Mimoun Gadgets Services LTD has been at the forefront of technology and innovation for over a
+                        decade.As a leading telecommunications provider, we specialize in delivering a comprehensive
+                        range of solutions designed to enhance your digital experience. From networking solutions
+                        services that ensure seamless connectivity for businesses of all sizes to cutting-edge chipset
+                        solutions driving technological advancement, we're dedicated to keeping you connected at every
+                        turn.
+
+                        Our expertise extends to modems, routers, and fiber optics installation, providing fast,
+                        reliable connectivity for homes and businesses alike. With our robust switches and heavy data
+                        server hosting services, we ensure efficient data transmission and secure storage, empowering
+                        you to navigate the digital landscape with confidence.
+
+                        At Mimoun Gadgets Ltd, we pride ourselves on our commitment to excellence, reliability, and
+                        innovation. With our extensive range of services and solutions, we're here to help you unlock
+                        the full potential of connectivity, whether you're a small business looking to expand your
+                        network or an enterprise seeking to optimize your infrastructure.
+
+                        Discover the power of connectivity with Mimoun Gadgets Ltd. Welcome to the future of
+                        telecommunications.</p>
+                </section>
+            </div>
+        </main>
+        <section aria-label="Contact Us" id="contact">
+            <div class="container">
+                <h2>Get in Touch</h2>
+                <form class="flex-container" onsubmit="showMessage(); return false;">
+                    <input type="text" id="firstname" name="firstname" placeholder="Your Name" required>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </section>
+        <section id="map">
+            <div class="container">
+                <h2>Find Us</h2>
+                <iframe width="100%" height="400" frameborder="0" style="border:0"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.9930619943436!2d0.0714137157570105!3d51.49157847963538!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a77b6a4860b1%3A0x4f9d2fec8f5d94e0!2sPowis%20St%2C%20London%2C%20UK!5e0!3m2!1sen!2sus!4v1665307781239!5m2!1sen!2sus"
+                        allowfullscreen></iframe>
+            </div>
+        </section>
+        
+        <div class="alert-box" id="alertBox">Message Delivered!</div>
+        <footer class="container">
+            <small><a href="#">Privacy Policy</a> • <a href="#">Terms of Use</a>
+                <p class="p_footer">Company Number: 15616388</p>
+            </small>
+        </footer>
+    </div>
+    <script>
+        function showMessage() {
+            setTimeout(() => {
+                const alertBox = document.getElementById('alertBox');
+                alertBox.style.display = 'block';
+                setTimeout(() => alertBox.style.display = 'none', 3000); // Hide after 3 seconds
+            }, 2000); // 2 second delay
+        }
+        document.addEventListener('DOMContentLoaded', function () {
+            const hamburger = document.querySelector('.hamburger');
+            const menu = document.querySelector('.mobile-menu');
+
+            // Toggle menu display on hamburger click
+            hamburger.addEventListener('click', function () {
+                menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+            });
+
+            // Close the menu if clicking outside of it
+            document.addEventListener('click', function (e) {
+                if (!hamburger.contains(e.target) && !menu.contains(e.target)) {
+                    menu.style.display = 'none';
+                }
+            });
+
+            // Close the menu on scroll
+            window.addEventListener('scroll', function () {
+                menu.style.display = 'none';
+            });
+        });
+    </script>
+</body>
+
+</html>
