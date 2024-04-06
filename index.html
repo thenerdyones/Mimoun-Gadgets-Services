@@ -13,24 +13,25 @@
     <style>
         body {
             font-family: "Oswald", sans-serif;
-            background-color: #FEFDED;
+            background-color: #070F2B;
             /* Page background color */
-            color: #240A34;
+            color: #9290C3;
             /* Default text color */
         }
 
         h1 {
             font-size: 3rem;
             font-weight: 700;
-            color: #240A34;
+            color: #9290C3;
             /* Main headers color */
             margin-bottom: 0px;
+            text-align: center;
         }
 
         h2 {
             font-size: 2.5rem;
             font-weight: 600;
-            color: #35374B;
+            color: #535C91;
             /* Smaller headers color */
             margin-bottom: 2px;
         }
@@ -38,16 +39,16 @@
         h3 {
             font-size: 2rem;
             font-weight: 400;
-            color: #35374B;
+            color: #535C91;
             /* Smaller headers color */
             margin-bottom: 0;
         }
 
         h4,
         p {
-            font-size: 1.2rem;
+            font-size: 1rem;
             font-weight: 200;
-            color: #6B728E;
+            color: #EEEEEE;
             /* Paragraph text color */
         }
 
@@ -77,7 +78,7 @@
         }
 
         button {
-            background-color: #240A34;
+            background-color: #535C91;
             /* Button background color */
             color: #FEFDED;
             /* Button text color */
@@ -104,14 +105,19 @@
             height: 450px;
             object-fit: cover;
             margin-bottom: 10px;
-            opacity: 0.7;
+            opacity: 0.5;
             margin-top: 0;
         }
 
         .service-image-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 20px;
             position: relative;
-            width: 600px;
+            width: auto;
             margin-bottom: 20px;
+
         }
 
         .service-image {
@@ -176,6 +182,7 @@
         .welcome_p {
             color: #a5a5a5;
             font-weight: 300;
+            text-align: center;
         }
 
         .p_footer {
@@ -198,13 +205,18 @@
         .mobile-menu {
             display: none;
         }
+        .aboutUs_p{
+            text-align: center;
+        }
+        .p_service{
+            width: 160%;
+        }
 
         @media (max-width: 768px) {
 
             h1 {
                 font-size: 1.7rem;
                 font-weight: 700;
-                color: #240A34;
                 /* Main headers color */
                 margin-bottom: 0px;
                 text-align: center;
@@ -213,24 +225,23 @@
             h2 {
                 font-size: 2rem;
                 font-weight: 600;
-                color: #35374B;
                 /* Smaller headers color */
-                margin-bottom: 2px;
+                margin-bottom: 10px;
             }
 
             h3 {
-                font-size: 1.5rem;
-                font-weight: 400;
-                color: #35374B;
+                font-size: 1.3rem;
+                font-weight: 300;
+
                 /* Smaller headers color */
                 margin-bottom: 0;
             }
 
             h4,
             p {
-                font-size: 1rem;
+                font-size: 0.7rem;
                 font-weight: 200;
-                color: #6B728E;
+
                 /* Paragraph text color */
             }
 
@@ -243,6 +254,8 @@
                 max-width: 100vw;
                 margin: 0 auto;
                 box-sizing: border-box;
+                display: flex;
+                flex-direction: column;
             }
 
             .service-image {
@@ -267,17 +280,17 @@
                 position: fixed;
                 top: 20px;
                 right: 15px;
-                background-color: rgba(216, 222, 223, 0.95);
+                background-color: #535C91;
                 flex-direction: column;
                 align-items: flex-start;
                 padding: 20px;
                 box-shadow: 0 2px 5px rgba(255, 255, 255, 0.2);
                 z-index: 1;
-                width: 40%;
+                width: 30%;
             }
 
             .mobile-menu a {
-                color: rgb(48, 49, 61);
+                color: rgb(185, 185, 194);
                 padding: 10px;
                 text-decoration: none;
                 display: block;
@@ -332,78 +345,135 @@
             <div class="flex-container">
                 <section id="welcome">
                     <h1>Welcome to Mimoun Gadgets</h1>
-                    <p class="welcome_p">Your go-to for exceptional gadget services. From circuit board assembly to air
-                        conditioner installation, we're here to serve your technology needs.</p>
+                    <p class="welcome_p">Experience top-tier laptop and computer repairs with Mimoun Gadgets. Our skilled technicians are adept at diagnosing and fixing a wide range of issues, from software glitches to hardware malfunctions. Whether you need a simple tune-up or complex repairs, we ensure your devices run smoothly with minimal downtime.</p>
                     <img src="./IMAGES/bannerImage.jpg" alt="Gadget Services Banner" class="banner-image">
                 </section>
                 <section id="services">
                     <h2>Our Services</h2>
                     <div class="flex-container">
+
                         <div class="service-image-container">
-                            <button class="more-info"
-                                onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });">More
-                                Info</button>
-                            <img src="./IMAGES/image1.jpg" alt="Gadget Repair Services" class="service-image">
+                            <div>
+                                <button class="more-info"
+                                    onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });">More
+                                    Info</button>
+                                <img src="./IMAGES/image8.jpg" alt="Gadget Repair Services" class="service-image">
+                            </div>
+                            <div class="p_service">
+                                <h3>Laptop and Computer Repairs</h3>
+                                <p>Dive into the realm of expert laptop and computer repairs at Mimoun Gadgets. Our
+                                    technicians are not just repairers; they're problem solvers who specialize in a wide
+                                    array of technological issues. From overheating laptops salvaged with precision
+                                    cooling techniques to salvaging data from hard drives thought irreparable, we bring
+                                    your devices back from the brink. Our commitment to minimizing downtime means you
+                                    get back to work or play without missing a beat.</p>
+                            </div>
                         </div>
-                        <h3>Networking Solutions Services</h3>
-                        <p>Our expertise in networking solutions ensures that your connectivity needs are not just met
-                            but exceeded. From designing robust network architectures to implementing scalable
-                            solutions, we're committed to optimizing your digital infrastructure for maximum performance
-                            and reliability.</p>
+
+
                         <div class="service-image-container">
-                            <button class="more-info"
-                                onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });">More
-                                Info</button>
-                            <img src="./IMAGES/image2.jpg" alt="DIY Electronics" class="service-image">
+                            <div>
+                                <button class="more-info"
+                                    onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });">More
+                                    Info</button>
+                                <img src="./IMAGES/image7.jpg" alt="Gadget Repair Services" class="service-image">
+                            </div>
+                            <div class="p_service">
+                                <h3>Assembly and Disassembly of Electronic Parts with Modern Equipment</h3>
+                                <p>Our assembly and disassembly services are a techno-artisan's dream. Using advanced
+                                    tools like high-precision heating systems to smoothly dissolve stubborn adhesives
+                                    and 3D printing for manufacturing bespoke parts unavailable on the market, we ensure
+                                    each component of your gadget functions flawlessly. Our meticulous process, coupled
+                                    with an obsession for perfection, means your electronic devices are in the hands of
+                                    masters of the craft.</p>
+                            </div>
                         </div>
-                        <h3>Chipset Solutions</h3>
-                        <p> Dive into the heart of cutting-edge technology with our advanced chipset solutions.
-                            Engineered for efficiency and performance, our chipsets power the devices and networks of
-                            tomorrow, driving innovation across industries.</p>
+
                         <div class="service-image-container">
-                            <button class="more-info"
-                                onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });">More
-                                Info</button>
-                            <img src="./IMAGES/image3.jpg" alt="Networking Solutions" class="service-image">
+                            <div>
+                                <button class="more-info"
+                                    onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });">More
+                                    Info</button>
+                                <img src="./IMAGES/image6.jpg" alt="Gadget Repair Services" class="service-image">
+                            </div>
+                            <div class="p_service">
+                                <h3>Mobile Phone Repairs</h3>
+                                <p> Mobile phones are the lifelines of the modern world, and at Mimoun Gadgets, we
+                                    ensure yours stays in prime condition. Specializing in micro-soldering techniques to
+                                    fix unresponsive buttons and utilizing ultrasonic cleaning methods to breathe new
+                                    life into water-damaged devices, our repair services are comprehensive. From
+                                    shattered screens to faulty cameras, our repair magicians transform despair into
+                                    delight, ensuring your mobile companion is always by your side, in perfect working
+                                    order.</p>
+                            </div>
                         </div>
-                        <h3>Heavy Data Server Hosting</h3>
-                        <p>Trust your critical data and applications to our secure and reliable server hosting services.
-                            With state-of-the-art facilities and robust infrastructure, we provide a platform for your
-                            digital assets to thrive, offering unparalleled performance, security, and uptime.</p>
+
                         <div class="service-image-container">
-                            <button class="more-info"
-                                onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });">More
-                                Info</button>
-                            <img src="./IMAGES/image4.jpg" alt="Air Conditioner Installation" class="service-image">
+                            <div>
+                                <button class="more-info"
+                                    onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });">More
+                                    Info</button>
+                                <img src="./IMAGES/image5.jpg" alt="Gadget Repair Services" class="service-image">
+                            </div>
+                            <div class="p_service">
+                                <h3>Hands On Quality Checks of Devices</h3>
+                                <p>Beyond repairs, Mimoun Gadgets excels in the meticulous quality checks of devices.
+                                    Each gadget that passes through our doors undergoes a rigorous testing process,
+                                    utilizing diagnostic software that pushes the devices to their limits and hardware
+                                    assessments conducted by seasoned experts. Whether it's ensuring the longevity of a
+                                    battery or the responsiveness of a touchscreen, our quality checks are exhaustive,
+                                    guaranteeing that your device not only works but excels.</p>
+                            </div>
                         </div>
-                        <h3>Modems, Routers, and Fiber Optics Installation</h3>
-                        <p>PExperience the pinnacle of connectivity with our range of modems, routers, and fiber optics
-                            installation services. Whether you're upgrading your home network or deploying
-                            enterprise-grade infrastructure, we deliver fast, reliable connectivity solutions tailored
-                            to your specific requirements.</p>
+
+                        <div class="service-image-container">
+                            <div>
+                                <button class="more-info"
+                                    onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });">More
+                                    Info</button>
+                                <img src="./IMAGES/image1.jpg" alt="Gadget Repair Services" class="service-image">
+                            </div>
+                            <div>
+                                <h3>Networking Solutions Services</h3>
+                                <p>Our expertise in networking solutions ensures that your connectivity needs are not
+                                    just met
+                                    but exceeded. From designing robust network architectures to implementing scalable
+                                    solutions, we're committed to optimizing your digital infrastructure for maximum
+                                    performance
+                                    and reliability.</p>
+                            </div>
+                        </div>
+
+
+
+
                     </div>
                 </section>
                 <section id="about">
-                    <h2>About Us</h2>
-                    <p>Mimoun Gadgets Services LTD has been at the forefront of technology and innovation for over a
-                        decade.As a leading telecommunications provider, we specialize in delivering a comprehensive
-                        range of solutions designed to enhance your digital experience. From networking solutions
-                        services that ensure seamless connectivity for businesses of all sizes to cutting-edge chipset
-                        solutions driving technological advancement, we're dedicated to keeping you connected at every
-                        turn.
+                    <h1>About Us</h1>
+                    <p class="aboutUs_p">Mimoun Gadgets Services LTD is more than just a company; it's a beacon of innovation in the
+                        technological landscape. For over a decade, we've been pioneering solutions that go beyond mere
+                        gadget repairs to embrace the full spectrum of technological marvels. From intricate circuit
+                        board assemblies that breathe life into machines, to the customization and creation of
+                        electronic parts using state-of-the-art equipment, we stand at the vanguard of the digital
+                        revolution.
 
-                        Our expertise extends to modems, routers, and fiber optics installation, providing fast,
-                        reliable connectivity for homes and businesses alike. With our robust switches and heavy data
-                        server hosting services, we ensure efficient data transmission and secure storage, empowering
-                        you to navigate the digital landscape with confidence.
+                        Our expertise isn't confined to the lab. We're in the business of solving problems — whether
+                        that's reviving a water-damaged phone with our advanced techniques or innovating with 3D
+                        printing to produce parts that the market can't provide. We understand that technology is
+                        constantly evolving, and so are the needs of our customers. That's why we offer bespoke
+                        solutions tailored to the unique challenges and requirements of each project.
 
-                        At Mimoun Gadgets Ltd, we pride ourselves on our commitment to excellence, reliability, and
-                        innovation. With our extensive range of services and solutions, we're here to help you unlock
-                        the full potential of connectivity, whether you're a small business looking to expand your
-                        network or an enterprise seeking to optimize your infrastructure.
+                        Beyond our technical prowess, Mimoun Gadgets Services LTD is committed to excellence in every
+                        interaction. We believe in a future where technology enhances every aspect of life, making it
+                        more connected, efficient, and enjoyable. Our team of experts is dedicated to this vision,
+                        bringing their passion and precision to every task. From the initial diagnosis to the final
+                        quality check, we ensure that every device we touch meets our stringent standards of performance
+                        and reliability.
 
-                        Discover the power of connectivity with Mimoun Gadgets Ltd. Welcome to the future of
-                        telecommunications.</p>
+                        Join us on this journey into the future, where every gadget holds endless possibilities, and
+                        every challenge is an opportunity for innovation. At Mimoun Gadgets Services LTD, we're not just
+                        fixing devices; we're forging the path to a smarter, more connected world.</p>
                 </section>
             </div>
         </main>
@@ -421,11 +491,11 @@
             <div class="container">
                 <h2>Find Us</h2>
                 <iframe width="100%" height="400" frameborder="0" style="border:0"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.9930619943436!2d0.0714137157570105!3d51.49157847963538!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a77b6a4860b1%3A0x4f9d2fec8f5d94e0!2sPowis%20St%2C%20London%2C%20UK!5e0!3m2!1sen!2sus!4v1665307781239!5m2!1sen!2sus"
-                        allowfullscreen></iframe>
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.9930619943436!2d0.0714137157570105!3d51.49157847963538!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a77b6a4860b1%3A0x4f9d2fec8f5d94e0!2sPowis%20St%2C%20London%2C%20UK!5e0!3m2!1sen!2sus!4v1665307781239!5m2!1sen!2sus"
+                    allowfullscreen></iframe>
             </div>
         </section>
-        
+
         <div class="alert-box" id="alertBox">Message Delivered!</div>
         <footer class="container">
             <small><a href="#">Privacy Policy</a> • <a href="#">Terms of Use</a>
